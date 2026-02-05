@@ -1,0 +1,22 @@
+# Doxyfile configuration for Doxygen
+
+# Project related settings
+PROJECT_NAME           = "3DViewer Program Manual"
+OUTPUT_DIRECTORY       = doc
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+
+# Source related settings
+INPUT                  = ./manual/manual.dox
+FILE_PATTERNS          = *.dox
+RECURSIVE              = NO
+
+# Build related settings
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+# Graphviz configuration
+HAVE_DOT               = YES
+DOT_GRAPH_MAX_NODES    = 100
+GENERATE_TREEVIEW      = YES

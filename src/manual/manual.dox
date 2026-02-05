@@ -1,0 +1,33 @@
+/**
+ * @mainpage 3DViewer Program Manual
+ *
+ * @section overview Program Overview
+ * This manual describes the 3DViewer Program, a Qt-based application written in C++. The rendering is based on OpenGL, and the GUI is built using simple Qt widgets. The program uses threads for loading models (after clicking the "Load Model" button) and for creating GIF media. GIF creation is based on the Magick++ library. Most components rely on standard libraries, Qt libraries, and a custom library called s21Matrix+ (see src/include/matrix). Affine transformations are implemented using this library.
+ *
+ * @section compilation Building the Program
+ * To compile the program, use the provided 3d_viewer.pro file, which is used to create Makefile with targets:
+ * - `all` - Compiles the program. After successful compilation, an executable file named "3d_viewer" is created in the src directory.
+ * - `clean` - Removes build files.
+ * - `dvi` - Generates documentation in DVI format.
+ * - `dist` - Creates a distribution package.
+ *
+ * To test the program use tests_3d_viewer.pro.
+ *
+ * @section controls Program Controls
+ * The 3DViewer program supports the following features:
+ * - **Load Model**: The user selects a `.obj` file, and the model is loaded.
+ * - **Apply Transformation**: Moves the model in a specified direction.
+ * - **Apply Rotation**: Rotates the model around a chosen axis.
+ * - **Apply Scale**: Scales the model based on the entered scale value.
+ * - **Line Color**: Allows the user to choose the color of the model’s lines.
+ * - **Line Width**: Allows the user to set the width of the lines.
+ * - **Line Type**: Allows the user to choose the line type (solid or stippled).
+ * - **Background Color**: Allows the user to set the background color.
+ * - **Vertex Color**: If vertices are displayed, the user can choose their color.
+ * - **Vertex Size**: Allows the user to set the size of the vertices.
+ * - **Vertex Display Type**: Allows the user to switch between vertex display types (round, square, or none).
+ * - **Model Info**: After loading a model, displays information about the model (vertex count, edge count, and model name).
+ * - **Take Screenshot**: Allows the user to choose the screenshot format (.jpeg or .bmp) and save location.
+ * - **Record GIF**: Allows the user to select a save location for a GIF, which is recorded for 5 seconds at 10 FPS.
+ * - **Change Projection Type**: Switches between perspective and orthogonal projection types.
+ */
